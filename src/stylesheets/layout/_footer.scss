@@ -1,0 +1,99 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.footer {
+  background-color: $findfood-red;
+  padding: 80px 0;
+  padding-bottom: 60px;
+  color: $white;
+
+  @media (max-width: 768px) {
+    padding: 60px 20px;
+  }
+
+  @include element('box') {
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+    
+    .logo {
+      margin-bottom: 25px;
+    }
+
+    &-icon {
+      li {
+        display: flex;
+      }
+    }
+
+    &-social-media {
+      display: flex;
+      margin-bottom: 30px !important;
+
+      li {
+        background-color: $white;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        margin-right: 15px;
+        @include transition(.3s);
+
+        @include on-event {
+          background-color: $findfood-cream;
+        }
+
+        a {
+          display: flex;
+          height: 100%;
+
+          img {
+            display: block;
+            margin: auto;
+          }
+        }
+      }
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-top: 8px;
+      margin-right: 15px;
+
+      @include modifier('location') {
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDEyIDE0Ij4KICAgIDxnIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTEwIDQuMTU3Yy0yLjI5MSAwLTQuMTQ4IDEuODEtNC4xNDggNC4wNSAwIDEuNjM3Ljc0NyAzLjIyOCAxLjY3MyA0LjU1My44OTkgMS4yOTYgMS45MyAyLjI5MSAyLjQ3NSAyLjc3Ny41NDUtLjQ4NiAxLjU3Ni0xLjQ4MSAyLjQ3NS0yLjc3Ny45MjYtMS4zMjUgMS42NzMtMi45MTYgMS42NzMtNC41NTMgMC0yLjI0LTEuODU3LTQuMDUtNC4xNDgtNC4wNXptLTUuMzMzIDQuMDVDNC42NjcgNS4zMzIgNy4wNTQgMyAxMCAzczUuMzMzIDIuMzMyIDUuMzMzIDUuMjA3YzAgMS45NjctLjg5IDMuNzg0LTEuODc3IDUuMjA3LS45OTMgMS40MjMtMi4xMjUgMi41MDUtMi42OTcgMy4wMTQtLjQzNC4zODItMS4wODQuMzgyLTEuNTE4IDAtLjU3Mi0uNTEtMS43MDQtMS41OTEtMi42OTctMy4wMTQtLjk4OC0xLjQyMy0xLjg3Ny0zLjI0LTEuODc3LTUuMjA3ek0xMCA3LjA1Yy0uNjU0IDAtMS4xODUuNTItMS4xODUgMS4xNTcgMCAuNjM2LjUzIDEuMTU3IDEuMTg1IDEuMTU3LjY1NCAwIDEuMTg1LS41MiAxLjE4NS0xLjE1N1MxMC42NTUgNy4wNSAxMCA3LjA1ek03LjYzIDguMjA3YzAtMS4yNzkgMS4wNjEtMi4zMTQgMi4zNy0yLjMxNCAxLjMwOSAwIDIuMzcgMS4wMzUgMi4zNyAyLjMxNCAwIDEuMjc4LTEuMDYxIDIuMzE0LTIuMzcgMi4zMTQtMS4zMDkgMC0yLjM3LTEuMDM2LTIuMzctMi4zMTR6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNCAtMykiLz4KICAgIDwvZz4KPC9zdmc+Cg==');
+      }
+
+      @include modifier('phone') {
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj4KICAgIDxnIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTUuNTk0IDUuMDk1Yy0uMzE5IDAtLjUyLjI0OS0uNDk2LjQ5Mi40ODcgNC45MTcgNC4zOTggOC44MjggOS4zMTUgOS4zMTUuMjQzLjAyNS40OTItLjE3Ny40OTItLjQ5NnYtMS45NWMwLS4yMzUtLjE1MS0uNDQ0LS4zNzUtLjUxOGwtMS44OTUtLjYzMmMtLjE5Ny0uMDY2LS40MTQtLjAxNS0uNTYuMTMybC0uMzA0LjMwNGMtLjM2Mi4zNjItLjk0LjQzMi0xLjM3OC4xMzItMS4wMzYtLjcwOS0xLjY0LTEuMzA4LTIuMjgzLTIuMjc2LS4yOS0uNDM4LS4yMTUtMS4wMDcuMTQyLTEuMzYzbC4zMS0uMzFjLjE0Ny0uMTQ2LjE5OC0uMzYzLjEzMi0uNTZMOC4wNjIgNS40N2MtLjA3NC0uMjI0LS4yODMtLjM3NS0uNTE5LS4zNzVoLTEuOTV6bS0xLjU4Ni42QzMuOTEzIDQuNzM2IDQuNzAzIDQgNS41OTQgNGgxLjk1Yy43MDYgMCAxLjMzNC40NTIgMS41NTcgMS4xMjNsLjYzMiAxLjg5NWMuMTk3LjU5LjA0NCAxLjI0Mi0uMzk3IDEuNjgybC0uMzA1LjMwNWMuNTUzLjgzIDEuMDUgMS4zMjggMS45NyAxLjk1OGwuMy0uM2MuNDQtLjQ0IDEuMDktLjU5MyAxLjY4LS4zOTZsMS44OTYuNjMyYy42Ny4yMjMgMS4xMjMuODUgMS4xMjMgMS41NTh2MS45NWMwIC44OS0uNzM1IDEuNjgtMS42OTYgMS41ODUtNS40MzUtLjUzOC05Ljc1OC00Ljg2LTEwLjI5Ni0xMC4yOTZ6bTcuNjEtMS4xNDdjMC0uMzAzLjI0Ni0uNTQ4LjU0OC0uNTQ4QzE0LjI4NCA0IDE2IDUuNzE2IDE2IDcuODM0YzAgLjMwMi0uMjQ1LjU0OC0uNTQ4LjU0OC0uMzAyIDAtLjU0Ny0uMjQ2LS41NDctLjU0OCAwLTEuNTEyLTEuMjI3LTIuNzM5LTIuNzM5LTIuNzM5LS4zMDIgMC0uNTQ4LS4yNDUtLjU0OC0uNTQ3em0wIDIuMTljMC0uMzAyLjI0Ni0uNTQ3LjU0OC0uNTQ3LjkwOCAwIDEuNjQzLjczNSAxLjY0MyAxLjY0MyAwIC4zMDItLjI0NS41NDgtLjU0Ny41NDgtLjMwMyAwLS41NDgtLjI0Ni0uNTQ4LS41NDggMC0uMzAzLS4yNDUtLjU0OC0uNTQ4LS41NDgtLjMwMiAwLS41NDgtLjI0NS0uNTQ4LS41NDh6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNCAtNCkiLz4KICAgIDwvZz4KPC9zdmc+Cg==');
+      }
+
+      @include modifier('email') {
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDE2IDEyIj4KICAgIDxwYXRoIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTE0LjU5NCAwSDEuNDA2Qy42MzIgMCAwIC42MjEgMCAxLjM4NXY5LjIzQzAgMTEuMzc2LjYzIDEyIDEuNDA2IDEyaDEzLjE4OGMuNzcyIDAgMS40MDYtLjYyIDEuNDA2LTEuMzg1di05LjIzQzE2IC42MjQgMTUuMzcgMCAxNC41OTQgMHpNMTQuNC45MjNMOC4wMyA3LjE5NSAxLjYwNS45MjNIMTQuNHpNLjkzNyAxMC40MjRWMS41NzFMNS40NTIgNS45OC45MzggMTAuNDI0em0uNjYzLjY1M2w0LjUxOC00LjQ0OCAxLjU4MyAxLjU0NWMuMTgzLjE3OS40OC4xNzguNjYyLS4wMDJsMS41NDMtMS41MiA0LjQ5NCA0LjQyNUgxLjZ6bTEzLjQ2My0uNjUzTDEwLjU2OSA2bDQuNDkzLTQuNDI0djguODQ4eiIvPgo8L3N2Zz4K');
+      }
+    }
+
+    .title {
+      margin-bottom: 30px;
+      @include fonts('Gilroy Bold');
+
+      @media (max-width: 414px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    ul {
+      margin-bottom: 0;
+
+      li {
+        line-height: 2.2;
+
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
+}

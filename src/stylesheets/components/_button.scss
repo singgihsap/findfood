@@ -1,0 +1,8 @@
+.btn {
+  &-primary {
+    background-color: $findfood-red !important;
+    border-color: $findfood-red !important;
+    border-radius: 8px !important;
+    @include fonts('Gilroy Bold')
+  }
+}

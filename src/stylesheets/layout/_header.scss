@@ -1,0 +1,136 @@
+.header {
+  .navbar {
+    background-color: $findfood-red;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    .btn-menu {
+      background-color: transparent !important;
+      border: 0 !important;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .navbar-toggler-icon {
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxMy40MzUiPjxnIGRhdGEtbmFtZT0iR3JvdXAgMjI2NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIj48cGF0aCBkYXRhLW5hbWU9IkxpbmUgNjYiIGQ9Ik0yLjYzNi4zNTRsMTIuNzI4IDEyLjcyOCIvPjxwYXRoIGRhdGEtbmFtZT0iTGluZSA2OCIgZD0iTTIuNjM2IDEzLjA4MkwxNS4zNjQuMzU0Ii8+PC9nPjwvc3ZnPg==');
+      background-size: 85%;
+      transition: all .3s ease-in-out;
+    }
+
+    .collapsed {
+      .navbar-toggler-icon {
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxNSI+PGcgZGF0YS1uYW1lPSJHcm91cCAyMjY1IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiPjxwYXRoIGRhdGEtbmFtZT0iTGluZSA2NiIgZD0iTTAgLjVoMTgiLz48cGF0aCBkYXRhLW5hbWU9IkxpbmUgNjciIGQ9Ik0wIDcuNWgxOCIvPjxwYXRoIGRhdGEtbmFtZT0iTGluZSA2OCIgZD0iTTAgMTQuNWgxOCIvPjwvZz48L3N2Zz4=');
+        background-size: 80%;
+        transition: all .3s ease-in-out;
+      }
+    }
+
+    #navbarMenu {
+      @media (max-width: 991px) {
+        padding: 20px 0;
+      }
+
+      &.show {
+        &:after {
+          content: '';
+          position: fixed;
+          top: 237px;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0.6;
+          background-color: #333333;
+          z-index: 0;
+        }
+      }
+    }
+
+    form {
+      width: 613px;
+      margin-left: 10%;
+      margin-right: 10%;
+
+      @media (max-width: 991px) {
+        width: 100%;
+        margin: 0;
+      }
+
+      .input-group {
+        .form-control {
+          border-top-left-radius: 8px !important;
+          border-bottom-left-radius: 8px !important;
+          padding: 20px !important;
+          height: 50px;
+        }
+
+        .btn {
+          position: relative;
+          background-color: $white;
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+          line-height: 0;
+
+          &:before {
+            content: '';
+            display: block;
+            background-color: #efe0d1;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 1px;
+            height: 30px;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+
+    .navbar-nav {
+      @media (max-width: 991px) {
+        margin-top: 15px;
+      }
+
+      .delivery {
+        background-color: $white;
+        border-radius: 30px;
+        display: inline-flex;
+        padding: 5px 10px;
+        padding-left: 5px;
+
+        @include element('image') {
+          background-color: $findfood-red;
+          width: 42px;
+          height: 42px;
+          border-radius: 100%;
+          align-self: center;
+          box-shadow: 0 6px 8px 0 rgba(146, 40, 45, 0.28);
+          display: flex;
+
+          img {
+            height: 100%;
+            margin: auto;
+          }
+        }
+
+        @include element('content') {
+          text-align: center;
+          margin: 0 10px;
+          align-self: center;
+
+          .number {
+            font-size: 20px;
+            line-height: 1;
+            @include fonts('Gilroy Bold')
+          }
+
+          p {
+            font-size: 12px;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

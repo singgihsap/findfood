@@ -1,0 +1,102 @@
+.slider {
+  overflow: hidden;
+
+  &.slider-half {
+    @media (max-width: 768px) {
+      padding-right: 40px;
+    }
+
+    .slider__box {
+      @media (max-width: 768px) {
+        margin-right: 10px;
+      }
+
+      .image-slider {
+        @media (max-width: 768px) {
+          height: 327px;
+        }
+      }
+
+      .box-overlay {
+        display: block !important;
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        width: 100%;
+      }
+    }
+
+    .slick-prev,
+    .slick-next {
+      display: none !important;
+    }
+  }
+
+  @include element('box') {
+    position: relative;
+    margin-right: 10px;
+
+    &:focus {
+      outline: none !important;
+    }
+
+    .image-slider {
+      background-color: #F9F9F9;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+
+      @media (max-width: 490px) {
+        height: 350px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .slick-slide {
+    @media (max-width: 490px) {
+      margin: 0 2px;
+    }
+  }
+
+  .slick-list {
+    overflow: unset !important;
+  }
+
+  .slick-prev {
+    background: url('../images/icon/ic-arrow-left.svg') no-repeat center center !important;
+    left: unset;
+
+    &:before {
+      content: "";
+    }
+
+    &:hover {
+      background: url('../images/icon/ic-arrow-left_hover.svg') no-repeat center center !important;
+    }
+  }
+
+  .slick-next {
+    background: url('../images/icon/ic-arrow-right.svg') no-repeat center center !important;
+    right: 0;
+
+    &:before {
+      content: "";
+    }
+
+    &:hover {
+      background: url('../images/icon/ic-arrow-right_hover.svg') no-repeat center center !important;
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    z-index: 1;
+    width: 46px;
+    height: 51px;
+
+    &.slick-disabled {
+      opacity: .5;
+    }
+  }
+}

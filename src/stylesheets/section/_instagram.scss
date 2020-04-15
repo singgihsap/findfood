@@ -1,0 +1,24 @@
+.instagram {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @media (max-width: 768px) {
+    padding-top: 10px;
+  }
+
+  .flockler-wall-item__content {
+    border: 0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .flockler-btn-load-more {
+    background-color: $white !important;
+    font-size: 16px !important;
+    color: $findfood-red !important;
+    width: 188px !important;
+    border-radius: 8px;
+    bottom: -20px !important;
+    @include fonts('Gilroy Bold')
+  }
+}

@@ -1,0 +1,30 @@
+/// Regular font family
+
+/// Copy text color
+/// @type Color
+$text-color: #333333 !default;
+
+/// Main brand color
+/// @type Color
+$white: #ffffff;
+$black: #000000;
+$findfood-red: #ff3c45;
+$findfood-cream: #fff5ec;
+$findfood-border: #efe0d1;
+
+/// Monochrome Pallete
+/// @type Color
+$super-light-grey: #F5F5F5;
+$light-grey: rgb(220, 220, 220) !default;
+$mid-grey: #EFEFEF !default;
+$dark-grey: rgb(68, 68, 68) !default;
+$secondary-color: #fafafa;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;

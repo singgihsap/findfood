@@ -1,0 +1,40 @@
+.pagination {
+  margin-left: 1px;
+  margin-top: 30px;
+  float: right;
+
+  li {
+    background-color: $white;
+    border: 1px solid $findfood-border;
+    margin-left: -1px;
+
+    &:first-child {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    &.active {  
+      .page-link {
+        background-color: $findfood-red !important;
+        border-color: $findfood-red;
+        border-radius: 5px;
+        box-shadow: 0 2px 3px 0 rgba(77, 85, 182, 0.23);
+        @include fonts('Gilroy Bold');
+      }
+    }
+
+    .page-link {
+      background-color: transparent;
+      padding: 8px 14px;  
+      font-size: 14px;
+      margin: 3px;
+      border: 0 !important;
+      color: $text-color;
+    }
+  }
+}

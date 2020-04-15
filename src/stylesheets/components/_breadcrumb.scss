@@ -1,0 +1,36 @@
+nav {
+  .breadcrumb {
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+
+    li {
+      &.active {
+        color: $text-color;
+        @include fonts('Gilroy Medium')
+      }
+
+      a {
+        color: $findfood-red;
+        @include fonts('Gilroy Bold')
+      }
+    }
+
+    @include modifier('desktop') {
+      display: inline-flex;
+
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
+
+    @include modifier('mobile') {
+      display: none;
+      
+      @media (max-width: 991px) {
+        display: inline-flex;
+      }
+    }
+  }
+}

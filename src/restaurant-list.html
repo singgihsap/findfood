@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Restaurant | List</title>
+  <!-- start:stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/awesome-bootstrap-checkbox/1.0.0-alpha.2/awesome-bootstrap-checkbox.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <!-- end:/stylesheets -->
+</head>
+
+<body>
+  <!-- start:loading -->
+  <div class="loading">
+    <div class="loading-container">
+      <div class="loading-item"></div>
+    </div>
+  </div>
+  <!-- end:/loading -->
+  
+  <!-- start:header -->
+  <header class="header">
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img width="130" src="assets/images/logo-white.svg" alt="Logo Find Food">
+        </a>
+        <button class="btn-menu navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse justify-content-between" id="navbarMenu">
+          <form>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Chicken rice, free delivery...">
+              <div class="input-group-append">
+                <button class="btn" type="submit">
+                  <img src="assets/images/icon/ic-search-red.svg" alt="Icon search">
+                </button>
+              </div>
+            </div>
+          </form>
+          <div class="navbar-nav">
+            <div class="delivery">
+              <div class="delivery__image">
+                <img width="17" src="assets/images/icon/ic-location-white.svg" alt="Icon Location Delivery">
+              </div>
+              <div class="delivery__content">
+                <div class="number">589664</div>
+                <p>Delivery</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- end:/header -->
+  
+  <!-- start:restaurant -->
+  <div class="restaurant">
+    <!-- start:restaurant filter -->
+    <div class="restaurant__filter">
+      <div class="container">
+        <!-- start:breadcrumb mobile -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb breadcrumb--mobile">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active">Search Result</li>
+          </ol>
+        </nav>
+        <!-- end:/breadcrumb mobile -->
+
+        <!-- start:filter -->
+        <div class="filter">
+          <div class="filter__type">
+            <div class="title">Type</div>
+            <ul class="list-unstyled" id="filterType">
+              <li class="active"><a href="javascript:;" class="btn btn-link">Hawker</a></li>
+              <li><a href="javascript:;" class="btn btn-link">Restaurant</a></li>
+              <li><a href="javascript:;" class="btn btn-link">Drinks</a></li>
+            </ul>
+          </div>
+          <div class="filter__distance">
+            <div class="title">Distance</div>
+            <ul class="list-unstyled" id="filterDistance">
+              <li><a href="javascript:;" class="btn btn-link">< 2 km</a></li>
+              <li class="active"><a href="javascript:;" class="btn btn-link">2 km - 5 km</a></li>
+              <li><a href="javascript:;" class="btn btn-link">> 5 km</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- end:/filter -->
+      </div>
+    </div>
+    <!-- end:/restaurant filter -->
+
+    <!-- start:restaurant main -->
+    <div class="restaurant-main">
+      <div class="container">
+        <!-- start:breadcrumb desktop -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb breadcrumb--desktop">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active">Search Result</li>
+          </ol>
+        </nav>
+        <!-- end:/breadcrumb desktop -->
+
+        <!-- start:restaurant content -->
+        <div class="restaurant-content">
+          <div class="row">
+            <div class="col-lg-3">
+              <!-- start:restaurant sidebar -->
+              <div class="restaurant__sidebar">
+                <!-- start:filter desktop -->
+                <div class="filter-desktop">
+                  <!-- start:filter item -->
+                  <div class="box">
+                    <div class="box__title">Dietary Preference</div>
+                    <ul class="list-unstyled">
+                      <li>
+                        <div class="form-check abc-checkbox abc-checkbox-danger">
+                          <input class="form-check-input" id="Dietary1" type="checkbox">
+                          <label class="form-check-label" for="Dietary1">
+                            None
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-check abc-checkbox abc-checkbox-danger">
+                          <input class="form-check-input" id="Dietary2" type="checkbox">
+                          <label class="form-check-label" for="Dietary2">
+                            Gluten Free
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-check abc-checkbox abc-checkbox-danger">
+                          <input class="form-check-input" id="Dietary3" type="checkbox">
+                          <label class="form-check-label" for="Dietary3">
+                            Halal
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-check abc-checkbox abc-checkbox-danger">
+                          <input class="form-check-input" id="Dietary4" type="checkbox">
+                          <label class="form-check-label" for="Dietary4">
+                            Kosher
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-check abc-checkbox abc-checkbox-danger">
+                          <input class="form-check-input" id="Dietary5" type="checkbox">
+                          <label class="form-check-label" for="Dietary5">
+                            Vegan
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-check abc-checkbox abc-checkbox-danger">
+                          <input class="form-check-input" id="Dietary6" type="checkbox">
+                          <label class="form-check-label" for="Dietary6">
+                            Vegetarian
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- end:/filter item -->
+                  
+                  <!-- start:filter item -->
+                  <div class="box">
+                    <div class="box__title">Cuisine</div>
+                    <ul class="list-unstyled">
+                      <li>
+                        <div class="form-check abc-checkbox abc-checkbox-danger">
+                          <input class="form-check-input" id="Cuisine1" type="checkbox">
+                          <label class="form-check-label" for="Cuisine1">
+                            Italian
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- end:/filter item -->
+                  
+                  <!-- start:filter item -->
+                  <div class="box">
+                    <div class="box__title">Price</div>
+                    <ul class="list-unstyled">
+                      <li>
+                        <div class="form-check abc-checkbox abc-checkbox-danger">
+                          <input class="form-check-input" id="Price1" type="checkbox">
+                          <label class="form-check-label" for="Price1">
+                            Less than $10 per head
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-check abc-checkbox abc-checkbox-danger">
+                          <input class="form-check-input" id="Price2" type="checkbox">
+                          <label class="form-check-label" for="Price2">
+                            $10 - $30 per head
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-check abc-checkbox abc-checkbox-danger">
+                          <input class="form-check-input" id="Price3" type="checkbox">
+                          <label class="form-check-label" for="Price3">
+                            $30 - $60 per head
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-check abc-checkbox abc-checkbox-danger">
+                          <input class="form-check-input" id="Price4" type="checkbox">
+                          <label class="form-check-label" for="Price4">
+                            $60 - $90 per head
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-check abc-checkbox abc-checkbox-danger">
+                          <input class="form-check-input" id="Price5" type="checkbox">
+                          <label class="form-check-label" for="Price5">
+                            More than $90 per head
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- end:/filter item -->
+                  
+                  <!-- start:filter item -->
+                  <div class="box">
+                    <div class="box__title">Available</div>
+                    <ul class="list-unstyled">
+                      <li>
+                        <div class="form-check abc-checkbox abc-checkbox-danger">
+                          <input class="form-check-input" id="Available1" type="checkbox">
+                          <label class="form-check-label" for="Available1">
+                            Now
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-check abc-checkbox abc-checkbox-danger">
+                          <input class="form-check-input" id="Available2" type="checkbox">
+                          <label class="form-check-label" for="Available2">
+                            Later
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- end:/filter item -->
+                </div>
+                <!-- end:/filter desktop -->
+
+                <!-- start:filter mobile -->
+                <div class="filter-mobile">
+                  <a class="btn btn-primary d-block collapsed" data-toggle="collapse" href="#collapseFilter">
+                    <img src="assets/images/icon/ic-filter.svg" alt="Icon filter">
+                    <span>Filter</span>
+                  </a>
+                  <div class="collapse" id="collapseFilter">
+                    <div class="card card-body">
+                      <!-- start:filter item -->
+                      <div class="box">
+                        <div class="box__title">Dietary Preference</div>
+                        <ul class="list-unstyled">
+                          <li>
+                            <div class="form-check abc-checkbox abc-checkbox-danger">
+                              <input class="form-check-input" id="MobileDietary1" type="checkbox">
+                              <label class="form-check-label" for="MobileDietary1">
+                                None
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check abc-checkbox abc-checkbox-danger">
+                              <input class="form-check-input" id="MobileDietary2" type="checkbox">
+                              <label class="form-check-label" for="MobileDietary2">
+                                Gluten Free
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check abc-checkbox abc-checkbox-danger">
+                              <input class="form-check-input" id="MobileDietary3" type="checkbox">
+                              <label class="form-check-label" for="MobileDietary3">
+                                Halal
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check abc-checkbox abc-checkbox-danger">
+                              <input class="form-check-input" id="MobileDietary4" type="checkbox">
+                              <label class="form-check-label" for="MobileDietary4">
+                                Kosher
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check abc-checkbox abc-checkbox-danger">
+                              <input class="form-check-input" id="MobileDietary5" type="checkbox">
+                              <label class="form-check-label" for="MobileDietary5">
+                                Vegan
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check abc-checkbox abc-checkbox-danger">
+                              <input class="form-check-input" id="MobileDietary6" type="checkbox">
+                              <label class="form-check-label" for="MobileDietary6">
+                                Vegetarian
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- end:/filter item -->
+                      
+                      <!-- start:filter item -->
+                      <div class="box">
+                        <div class="box__title">Cuisine</div>
+                        <ul class="list-unstyled">
+                          <li>
+                            <div class="form-check abc-checkbox abc-checkbox-danger">
+                              <input class="form-check-input" id="MobileCuisine1" type="checkbox">
+                              <label class="form-check-label" for="MobileCuisine1">
+                                Italian
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- end:/filter item -->
+                      
+                      <!-- start:filter item -->
+                      <div class="box">
+                        <div class="box__title">Price</div>
+                        <ul class="list-unstyled">
+                          <li>
+                            <div class="form-check abc-checkbox abc-checkbox-danger">
+                              <input class="form-check-input" id="MobilePrice1" type="checkbox">
+                              <label class="form-check-label" for="MobilePrice1">
+                                Less than $10 per head
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check abc-checkbox abc-checkbox-danger">
+                              <input class="form-check-input" id="MobilePrice2" type="checkbox">
+                              <label class="form-check-label" for="MobilePrice2">
+                                $10 - $30 per head
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check abc-checkbox abc-checkbox-danger">
+                              <input class="form-check-input" id="MobilePrice3" type="checkbox">
+                              <label class="form-check-label" for="MobilePrice3">
+                                $30 - $60 per head
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check abc-checkbox abc-checkbox-danger">
+                              <input class="form-check-input" id="MobilePrice4" type="checkbox">
+                              <label class="form-check-label" for="MobilePrice4">
+                                $60 - $90 per head
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check abc-checkbox abc-checkbox-danger">
+                              <input class="form-check-input" id="MobilePrice5" type="checkbox">
+                              <label class="form-check-label" for="MobilePrice5">
+                                More than $90 per head
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- end:/filter item -->
+                      
+                      <!-- start:filter item -->
+                      <div class="box">
+                        <div class="box__title">Available</div>
+                        <ul class="list-unstyled">
+                          <li>
+                            <div class="form-check abc-checkbox abc-checkbox-danger">
+                              <input class="form-check-input" id="MobileAvailable1" type="checkbox">
+                              <label class="form-check-label" for="MobileAvailable1">
+                                Now
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check abc-checkbox abc-checkbox-danger">
+                              <input class="form-check-input" id="MobileAvailable2" type="checkbox">
+                              <label class="form-check-label" for="MobileAvailable2">
+                                Later
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- end:/filter item -->
+                    </div>
+                  </div>
+                </div>
+                <!-- end:/filter mobile -->
+              </div>
+              <!-- end:/restaurant sidebar -->
+            </div>
+            <div class="col-lg">
+              <!-- start:restaurant list -->
+              <div class="restaurant__list">
+                <!-- start:box item -->
+                <div class="box">
+                  <!-- start:box image -->
+                  <a href="restaurant-details.html" class="box__image">
+                    <div class="thumbnail">
+                      <div class="distance">
+                        <img class="distance__icon" src="assets/images/icon/ic-km.svg" alt="Icon distance">
+                        <span>0,3 km</span>
+                      </div>
+                      <img class="image-restaurant" src="assets/images/restaurant/thumbnail-1.jpeg" alt="Image Restaurant">
+                    </div>
+                  </a>
+                  <!-- end:/box image -->
+
+                  <!-- start:box content -->
+                  <div class="box__content">
+                    <!-- start:block -->
+                    <div class="block">
+                      <div class="block__tag">
+                        <span>Hawkers </span>
+                        <span>&middot;</span>
+                        <span>Promo, Asian, Chinatown</span>
+                      </div>
+                      <div class="block__title">
+                        <a href="restaurant-details.html">
+                          <h2>Meta Restaurant</h2>
+                        </a>
+                        <div class="time">Closing in 1 hour</div>
+                      </div>
+                      <div class="block__description">
+                        <ul>
+                          <li>$10 per delivery</li>
+                          <li>Free delivery above $100 & 3 km</li>
+                          <li>Ala carta $20 onwards</li>
+                        </ul>
+                      </div>
+                      <div class="block__info">
+                        <div class="delivery-location">
+                          <div class="title">Delivery Location</div>
+                          <p>Serangoon, Hougang</p>
+                        </div>
+                        <div class="order-by">
+                          <div class="title">Available order via</div>
+                          <ul class="list-unstyled">
+                            <li><a href="#"><img src="assets/images/icon/ic-website.svg" alt="Icon Website"></a></li>
+                            <li><a href="#"><img src="assets/images/icon/ic-whatsapp.svg" alt="Icon Whatsapp"></a></li>
+                            <li><a href="#"><img src="assets/images/icon/ic-telephone.svg" alt="Icon Telephone"></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end:/block -->
+                  </div>
+                  <!-- end:/box content -->
+                </div>
+                <!-- end:/box item -->
+
+                <!-- start:box item -->
+                <div class="box">
+                  <!-- start:box image -->
+                  <a href="restaurant-details.html" class="box__image">
+                    <div class="thumbnail">
+                      <div class="distance">
+                        <img class="distance__icon" src="assets/images/icon/ic-km.svg" alt="Icon distance">
+                        <span>0,3 km</span>
+                      </div>
+                      <img class="image-restaurant" src="assets/images/restaurant/thumbnail-2.jpeg" alt="Image Restaurant">
+                    </div>
+                  </a>
+                  <!-- end:/box image -->
+                
+                  <!-- start:box content -->
+                  <div class="box__content">
+                    <!-- start:block -->
+                    <div class="block">
+                      <div class="block__tag">
+                        <span>Restaurant </span>
+                        <span>&middot;</span>
+                        <span>Promo, Asian, Chinatown</span>
+                      </div>
+                      <div class="block__title">
+                        <a href="restaurant-details.html">
+                          <h2>Burjo Andalan Restaurant</h2>
+                        </a>
+                      </div>
+                      <div class="block__description">
+                        <ul>
+                          <li>$10 per delivery</li>
+                          <li>Free delivery above $100 & 3 km</li>
+                          <li>Ala carta $20 onwards</li>
+                        </ul>
+                      </div>
+                      <div class="block__info">
+                        <div class="delivery-location">
+                          <div class="title">Delivery Location</div>
+                          <p>Serangoon, Hougang</p>
+                        </div>
+                        <div class="order-by">
+                          <div class="title">Available order via</div>
+                          <ul class="list-unstyled">
+                            <li><a href="#"><img src="assets/images/icon/ic-whatsapp.svg" alt="Icon Whatsapp"></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end:/block -->
+                  </div>
+                  <!-- end:/box content -->
+                </div>
+                <!-- end:/box item -->
+
+                <!-- start:box item -->
+                <div class="box">
+                  <!-- start:box image -->
+                  <a href="restaurant-details.html" class="box__image">
+                    <div class="thumbnail">
+                      <div class="distance">
+                        <img class="distance__icon" src="assets/images/icon/ic-km.svg" alt="Icon distance">
+                        <span>0,3 km</span>
+                      </div>
+                      <img class="image-restaurant" src="assets/images/restaurant/thumbnail-3.jpeg" alt="Image Restaurant">
+                    </div>
+                  </a>
+                  <!-- end:/box image -->
+                
+                  <!-- start:box content -->
+                  <div class="box__content">
+                    <!-- start:block -->
+                    <div class="block">
+                      <div class="block__tag">
+                        <span>Hawkers </span>
+                        <span>&middot;</span>
+                        <span>Promo, Asian, Chinatown</span>
+                      </div>
+                      <div class="block__title">
+                        <a href="restaurant-details.html">
+                          <h2>Cafe Coffee</h2>
+                        </a>
+                      </div>
+                      <div class="block__description">
+                        <ul>
+                          <li>$10 per delivery</li>
+                          <li>Free delivery above $100 & 3 km</li>
+                          <li>Ala carta $20 onwards</li>
+                        </ul>
+                      </div>
+                      <div class="block__info">
+                        <div class="delivery-location">
+                          <div class="title">Delivery Location</div>
+                          <p>Serangoon, Hougang</p>
+                        </div>
+                        <div class="order-by">
+                          <div class="title">Available order via</div>
+                          <ul class="list-unstyled">
+                            <li><a href="#"><img src="assets/images/icon/ic-whatsapp.svg" alt="Icon Whatsapp"></a></li>
+                            <li><a href="#"><img src="assets/images/icon/ic-telephone.svg" alt="Icon Telephone"></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end:/block -->
+                  </div>
+                  <!-- end:/box content -->
+                </div>
+                <!-- end:/box item -->
+
+                <!-- start:box item -->
+                <div class="box">
+                  <!-- start:box image -->
+                  <a href="restaurant-details.html" class="box__image">
+                    <div class="thumbnail">
+                      <div class="distance">
+                        <img class="distance__icon" src="assets/images/icon/ic-km.svg" alt="Icon distance">
+                        <span>0,3 km</span>
+                      </div>
+                      <img class="image-restaurant" src="assets/images/restaurant/thumbnail-1.jpeg" alt="Image Restaurant">
+                    </div>
+                  </a>
+                  <!-- end:/box image -->
+                
+                  <!-- start:box content -->
+                  <div class="box__content">
+                    <!-- start:block -->
+                    <div class="block">
+                      <div class="block__tag">
+                        <span>Hawkers </span>
+                        <span>&middot;</span>
+                        <span>Promo, Asian, Chinatown</span>
+                      </div>
+                      <div class="block__title">
+                        <a href="restaurant-details.html">
+                          <h2>Meta Restaurant</h2>
+                        </a>
+                        <div class="time">Closing in 1 hour</div>
+                      </div>
+                      <div class="block__description">
+                        <ul>
+                          <li>$10 per delivery</li>
+                          <li>Free delivery above $100 & 3 km</li>
+                          <li>Ala carta $20 onwards</li>
+                        </ul>
+                      </div>
+                      <div class="block__info">
+                        <div class="delivery-location">
+                          <div class="title">Delivery Location</div>
+                          <p>Serangoon, Hougang</p>
+                        </div>
+                        <div class="order-by">
+                          <div class="title">Available order via</div>
+                          <ul class="list-unstyled">
+                            <li><a href="#"><img src="assets/images/icon/ic-website.svg" alt="Icon Website"></a></li>
+                            <li><a href="#"><img src="assets/images/icon/ic-whatsapp.svg" alt="Icon Whatsapp"></a></li>
+                            <li><a href="#"><img src="assets/images/icon/ic-telephone.svg" alt="Icon Telephone"></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end:/block -->
+                  </div>
+                  <!-- end:/box content -->
+                </div>
+                <!-- end:/box item -->
+                
+                <!-- start:box item -->
+                <div class="box">
+                  <!-- start:box image -->
+                  <a href="restaurant-details.html" class="box__image">
+                    <div class="thumbnail">
+                      <div class="distance">
+                        <img class="distance__icon" src="assets/images/icon/ic-km.svg" alt="Icon distance">
+                        <span>0,3 km</span>
+                      </div>
+                      <img class="image-restaurant" src="assets/images/restaurant/thumbnail-2.jpeg" alt="Image Restaurant">
+                    </div>
+                  </a>
+                  <!-- end:/box image -->
+                
+                  <!-- start:box content -->
+                  <div class="box__content">
+                    <!-- start:block -->
+                    <div class="block">
+                      <div class="block__tag">
+                        <span>Restaurant </span>
+                        <span>&middot;</span>
+                        <span>Promo, Asian, Chinatown</span>
+                      </div>
+                      <div class="block__title">
+                        <a href="restaurant-details.html">
+                          <h2>Burjo Andalan Restaurant</h2>
+                        </a>
+                      </div>
+                      <div class="block__description">
+                        <ul>
+                          <li>$10 per delivery</li>
+                          <li>Free delivery above $100 & 3 km</li>
+                          <li>Ala carta $20 onwards</li>
+                        </ul>
+                      </div>
+                      <div class="block__info">
+                        <div class="delivery-location">
+                          <div class="title">Delivery Location</div>
+                          <p>Serangoon, Hougang</p>
+                        </div>
+                        <div class="order-by">
+                          <div class="title">Available order via</div>
+                          <ul class="list-unstyled">
+                            <li><a href="#"><img src="assets/images/icon/ic-whatsapp.svg" alt="Icon Whatsapp"></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end:/block -->
+                  </div>
+                  <!-- end:/box content -->
+                </div>
+                <!-- end:/box item -->
+                
+                <!-- start:box item -->
+                <div class="box">
+                  <!-- start:box image -->
+                  <a href="restaurant-details.html" class="box__image">
+                    <div class="thumbnail">
+                      <div class="distance">
+                        <img class="distance__icon" src="assets/images/icon/ic-km.svg" alt="Icon distance">
+                        <span>0,3 km</span>
+                      </div>
+                      <img class="image-restaurant" src="assets/images/restaurant/thumbnail-3.jpeg" alt="Image Restaurant">
+                    </div>
+                  </a>
+                  <!-- end:/box image -->
+                
+                  <!-- start:box content -->
+                  <div class="box__content">
+                    <!-- start:block -->
+                    <div class="block">
+                      <div class="block__tag">
+                        <span>Hawkers </span>
+                        <span>&middot;</span>
+                        <span>Promo, Asian, Chinatown</span>
+                      </div>
+                      <div class="block__title">
+                        <a href="restaurant-details.html">
+                          <h2>Cafe Coffee</h2>
+                        </a>
+                      </div>
+                      <div class="block__description">
+                        <ul>
+                          <li>$10 per delivery</li>
+                          <li>Free delivery above $100 & 3 km</li>
+                          <li>Ala carta $20 onwards</li>
+                        </ul>
+                      </div>
+                      <div class="block__info">
+                        <div class="delivery-location">
+                          <div class="title">Delivery Location</div>
+                          <p>Serangoon, Hougang</p>
+                        </div>
+                        <div class="order-by">
+                          <div class="title">Available order via</div>
+                          <ul class="list-unstyled">
+                            <li><a href="#"><img src="assets/images/icon/ic-whatsapp.svg" alt="Icon Whatsapp"></a></li>
+                            <li><a href="#"><img src="assets/images/icon/ic-telephone.svg" alt="Icon Telephone"></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end:/block -->
+                  </div>
+                  <!-- end:/box content -->
+                </div>
+                <!-- end:/box item -->
+              </div>
+              <!-- end:/restaurant list -->
+
+              <!-- start:pagination -->
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+              <!-- end:/pagination -->
+            </div>
+          </div>
+        </div>
+        <!-- end:/restaurant content -->
+      </div>
+    </div>
+    <!-- end:/restaurant main -->
+  </div>
+  <!-- end:/restaurant -->
+
+  <!-- start:footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <!-- start:footer box -->
+          <div class="footer__box">
+            <div class="logo">
+              <img width="160" src="assets/images/logo-white.svg" alt="Logo Find Food SG">
+            </div>
+            <p>Discover & support independent restaurants <br/> & hawkers near you !</p>
+          </div>
+          <!-- end:/footer box -->
+        </div>
+        <div class="col-md">
+          <!-- start:footer box -->
+          <div class="footer__box">
+            <div class="title">Menu</div>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <!-- end:/footer box -->
+        </div>
+        <div class="col-md">
+          <!-- start:footer box -->
+          <div class="footer__box">
+            <div class="title">Social Media</div>
+            <ul class="list-unstyled footer__box-social-media">
+              <li><a href="mailto:info@findfood.sg"><img src="assets/images/icon/email.svg" alt="Icon Email"></a></li>
+              <li><a href="https://www.instagram.com/findfoodsg/" target="_blank"><img src="assets/images/icon/instagram.svg" alt="Icon Instagram"></a></li>
+              <li><a href="https://www.facebook.com/findfood.sg/" target="_blank"><img src="assets/images/icon/facebook.svg" alt="Icon Facebook"></a></li>
+            </ul>
+            <p>Copyright © 2020 Findfood Singapore. <br> All Rights Reserved.</p>
+          </div>
+          <!-- end:/footer box -->
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- end:/footer -->
+
+  <!-- start:javascripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="assets/js/style.js"></script>
+  <!-- end:/javascripts -->
+  <script>
+    // Script for set timeout loading
+    setTimeout(function () {
+      $('.loading').hide();
+    }, 5000);
+  </script>
+</body>
+
+</html>

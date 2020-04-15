@@ -1,0 +1,1028 @@
+.restaurant {
+  margin-top: 82px;
+
+  &-main {
+    padding: 20px 0;
+
+    .breadcrumb {
+      margin-bottom: 15px;
+    }
+  }
+
+  @include modifier('details') {
+    .restaurant__header {
+      margin-bottom: 20px;
+
+      .header {
+        &-desktop {
+          @media (max-width: 991px) {
+            display: none;
+          }
+        }
+
+        &-mobile {
+          display: none;
+
+          @media (max-width: 991px) {
+            display: block;
+          }
+
+          .slider {
+            margin-right: -5px;
+
+            &__box {
+              .image-slider {
+                height: 300px;
+              }
+            }
+          }
+        }
+      }
+
+      &-left {
+        padding-right: 5px;
+
+        @media (max-width: 991px) {
+          padding-right: 15px;
+        }
+      }
+
+      &-right {
+        padding-left: 5px;
+
+        @media (max-width: 991px) {
+          padding-left: 15px;
+        }
+      }
+
+      .block {
+        position: relative;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+
+        @include modifier('image-top') {
+          margin-bottom: 10px;
+        }
+
+        @include modifier('image-bottom') {
+          .image-bottom {
+            @include element('left') {
+              padding-right: 5px;
+            }
+
+            @include element('right') {
+              padding-left: 5px;
+
+              .more-image {
+                display: flex;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 8px;
+                overflow: hidden;
+
+                .overlay {
+                  margin: auto;
+                  width: 100%;
+                  height: 100%;
+                  background-color: $findfood-red;
+                  opacity: 0.5;
+                }
+
+                .action {
+                  display: block;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  font-size: 16px;
+                  color: $white;
+                  @include fonts('Gilroy Bold')
+                }
+              }
+            }
+          }
+        }
+
+        @include element('image-1') {
+          height: 450px;
+        }
+
+        @include element('image-2') {
+          height: 221px;
+        }
+
+        @include element('image-3') {
+          height: 221px;
+        }
+
+        @include element('image-4') {
+          height: 221px;
+        }
+      }
+    }
+
+    .restaurant__body {
+      .col-lg-3 {
+        padding-left: 5px;
+
+        @media (max-width: 991px) {
+          padding-left: 15px;
+        }
+      }
+
+      .box {
+        background-color: $white;
+        padding: 15px 30px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+
+        @media (max-width: 575px) {
+          padding: 20px;
+        }
+
+        @include modifier('header') {
+          .block {
+            display: flex;
+            justify-content: space-between;
+
+            @media (max-width: 768px) {
+              display: block;
+            }
+
+            .block__left {
+              align-self: center;
+
+              .title-header {
+                display: flex;
+
+                .distance {
+                  display: inline-flex;
+                  background-color: $findfood-red;
+                  color: $white;
+                  font-size: 13px;
+                  padding: 10px;
+                  border-radius: 8px;
+                  height: 40px;
+                  margin-right: 15px;
+                  @include fonts('Gilroy Bold');
+
+                  @media (max-width: 991px) {
+                    font-size: 12px;
+                    padding: 8px;
+                    height: unset;
+                  }
+
+                  @include element('icon') {
+                    margin-right: 3px;
+                    align-self: center;
+                  }
+                }
+
+                h2 {
+                  font-size: 34px;
+                  margin-bottom: 0;
+                  align-self: center;
+                  @include fonts('Gilroy Bold');
+
+                  @media (max-width: 991px) {
+                    font-size: 28px;
+                  }
+
+                  @media (max-width: 575px) {
+                    font-size: 24px;
+                  }
+                }
+              }
+            }
+
+            .block__right {
+              .block__review {
+                @media (max-width: 768px) {
+                  display: flex;
+                  justify-content: center;
+                }
+              }
+
+              .review__star {
+                margin-right: 20px;
+              }
+            }
+          }
+        }
+
+        @include modifier('body') {
+          padding: 25px 30px;
+
+          @media (max-width: 575px) {
+            padding: 20px;
+          }
+
+          .block {
+            margin-bottom: 20px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            .title {
+              font-size: 17px;
+              margin-bottom: 10px;
+              @include fonts('Gilroy Bold');
+            }
+
+            p {
+              font-size: 15px;
+              margin-bottom: 0;
+              line-height: 1.8;
+            }
+
+            @include element('header') {
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 15px;
+
+              .title {
+                margin-bottom: 0;
+                align-self: center;
+              }
+
+              .btn-link {
+                padding: 8px 20px;
+                background-color: $white !important;
+                font-size: 14px;
+                border-color: $findfood-border !important;
+                border-radius: 8px !important;
+                color: $findfood-red;
+                @include fonts('Gilroy Bold');
+
+                @include on-event {
+                  background-color: $findfood-red !important;
+                  color: $white;
+                }
+              }
+            }
+
+            @include element('body') {
+              .photos {
+                &__desktop {
+                  @media (max-width: 991px) {
+                    display: none;
+                  }
+
+                  .col-lg {
+                    padding-right: 5px;
+                    padding-left: 5px;
+
+                    &:first-child {
+                      padding-left: 15px;
+                    }
+
+                    &:last-child {
+                      padding-right: 15px;
+                    }
+                  }
+                }
+
+                &__mobile {
+                  display: none;
+
+                  @media (max-width: 991px) {
+                    display: block;
+                  }
+
+                  .slider {
+                    margin-right: -5px;
+
+                    &__box {
+                      .image-slider {
+                        height: 271px;
+                        object-fit: cover;
+                      }
+                    }
+                  }
+                }
+                
+                @include element('box') {
+                  position: relative;
+
+                  img {
+                    width: 100%;
+                    height: 271px;
+                    object-fit: cover;
+                    border-radius: 8px;
+                  }
+
+                  .more-image {
+                    display: flex;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 8px;
+                    overflow: hidden;
+
+                    .overlay {
+                      margin: auto;
+                      width: 100%;
+                      height: 100%;
+                      background-color: $findfood-red;
+                      opacity: 0.5;
+                    }
+
+                    .action {
+                      display: block;
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                      font-size: 16px;
+                      color: $white;
+                      @include fonts('Gilroy Bold')
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .block {
+          @include element('tag') {
+            font-size: 14px;
+            opacity: 0.5;
+            margin-bottom: 5px;
+          }
+
+          @include element('review') {
+            display: flex;
+            margin: 10px 0;
+
+            @media (max-width: 768px) {
+              display: block;
+
+              .dot {
+                display: none;
+              }
+
+              .review__star {
+                margin-bottom: 10px;
+              }
+            }
+            
+            .review {
+              @include element('star') {
+                font-size: 16px;
+                text-align: center;
+                
+                .star {
+                  &-main {
+                    display: flex;
+                  }
+
+                  &__average {
+                    margin-right: 5px;
+                    font-size: 22px;
+                    @include fonts('Gilroy Bold')
+                  }
+                  
+                  &__icon {
+                    display: flex;
+                    align-self: center;
+                    margin-right: 10px;
+                    margin-bottom: 0;
+
+                    li {
+                      color: #d8d8d8;
+
+                      &.full {
+                        color: #fbc40f;
+                      }
+                    }
+                  }
+
+                  &__total {
+                    opacity: 0.5;
+                  }
+                }
+              }
+
+              @include element('circles') {
+                text-align: center;
+
+                .circles {
+                  &-main {
+                    display: flex;
+                  }
+
+                  &__average {
+                    margin-right: 5px;
+                    font-size: 22px;
+                    @include fonts('Gilroy Bold')
+                  }
+
+                  &__icon {
+                    display: flex;
+                    align-self: center;
+                    margin-right: 10px;
+                    margin-bottom: 0;
+
+                    .circle {
+                      position: relative;
+                      display: inline-block;
+                      width: 15px;
+                      height: 15px;
+                      border-radius: 50%;
+                      list-style: none;
+                      border: 2px solid #00aa6c;
+                      overflow: hidden;
+                      margin-right: 2px;
+
+                      &.full {
+                        &:before {
+                          content: '';
+                          display: inline-block;
+                          background: #00aa6c;
+                          width: 100%;
+                          height: 100%;
+                          border-radius: 50%;
+                          vertical-align: top;
+                        }
+                      }
+
+                      &.half {
+                        &:before {
+                          content: '';
+                          display: inline-block;
+                          background: #00aa6c;
+                          width: 100%;
+                          height: 100%;
+                          margin-left: -50%;
+                          vertical-align: top;
+                        }
+                      }
+                    }
+                  }
+
+                  &__total {
+                    opacity: 0.5;
+                  }
+                }
+              }
+            }
+
+            .dot {
+              opacity: 0.5;
+              padding: 0 5px;
+            }
+          }
+
+          @include element('description') {
+            margin: 10px 0;
+            ul {
+              padding-left: 20px;
+
+              li {
+                line-height: 2;
+
+                @media (max-width: 768px) {
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include element('filter') {
+    background-color: $white;
+    box-shadow: 0 2px 10px 0 rgba(202, 171, 143, 0.6);
+
+    @media (max-width: 991px) {
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    .filter {
+      display: flex;
+      padding: 15px 0;
+
+      @media (max-width: 991px) {
+        display: block;
+      }
+
+      .title {
+        font-size: 16px;
+        align-self: center;
+        margin-right: 24px;
+        @include fonts('Gilroy Bold');
+
+        @media (max-width: 991px) {
+          margin-bottom: 15px;
+        }
+      }
+
+      ul {
+        display: inline-flex;
+        margin-bottom: 0;
+
+        @media (max-width: 991px) {
+          width: 100%;
+          padding-bottom: 10px;
+          overflow-y: auto;
+        }
+
+        li {
+          margin-right: 15px;
+          align-self: center;
+
+          &.active {
+            a {
+              color: $findfood-red;
+              border-color: $findfood-red;
+              @include fonts('Gilroy Bold')
+            }
+          }
+
+          a {
+            background-color: $white;
+            padding: 12px 25px;
+            border: 1px solid $findfood-border;
+            border-radius: 8px;
+            color: $text-color;
+            text-decoration: none;
+            white-space: nowrap;
+
+            @include on-event {
+              border-color: $findfood-red;
+            }
+          }
+        }
+      }
+
+      @include element('type') {
+        display: flex;
+        position: relative;
+        padding-right: 20px;
+        margin-right: 20px;
+
+        @media (max-width: 991px) {
+          padding-right: 0;
+          margin-right: 0;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translate(-50%, -50%);
+          background-color: $findfood-border;
+          width: 1px;
+          height: 45px;
+
+          @media (max-width: 991px) {
+            content: unset;
+          }
+        }
+
+        @media (max-width: 991px) {
+          display: block;
+          margin-bottom: 15px;
+        }
+      }
+
+      @include element('distance') {
+        display: flex;
+
+        @media (max-width: 991px) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  @include element('sidebar') {
+    .filter-desktop {
+      display: block;
+
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
+
+    .filter-mobile {
+      display: none;
+
+      @media (max-width: 991px) {
+        display: block;
+      }
+
+      .btn-primary {
+        position: relative;
+        background-color: $white !important;
+        border-color: $findfood-border !important;
+        color: $text-color;
+        text-align: left;
+        padding: 12px 20px;
+        letter-spacing: 1px;
+
+        &.collapsed {
+          box-shadow: 0 16px 25px 0 rgba(177, 138, 102, 0.38);
+          
+          &:after {
+            transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            @include transition(.3s)
+          }
+        }
+
+        &:after {
+          content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNSIgdmlld0JveD0iMCAwIDI0IDI1Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggc3Ryb2tlPSIjMzMzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTYgOUwxMiAxNSAxOCA5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDEpIi8+CiAgICA8L2c+Cjwvc3ZnPgo=');
+          height: 50%;
+          position: absolute;
+          top: 12px;
+          right: 15px;
+          transform: rotate(180deg);
+          -webkit-transform: rotate(180deg);
+          @include transition(.3s)
+        }
+
+        span {
+          vertical-align: middle;
+        }
+      }
+
+      .card {
+        background-color: transparent;
+        border: 0;
+        padding: 20px 0;
+        padding-bottom: 0;
+      }
+    }
+
+    .box {
+      background-color: $white;
+      padding: 20px 24px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+
+      @include element('title') {
+        font-size: 16px;
+        margin-bottom: 20px;
+        @include fonts('Gilroy Bold')
+      }
+
+      ul {
+        margin-bottom: 0;
+
+        li {
+          margin-bottom: 10px;
+
+          label {
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+
+    @include modifier('details') {
+      background-color: $white;
+      padding: 25px;
+      border-radius: 8px;
+
+      @media (max-width: 575px) {
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+
+      .box {
+        padding: 0 !important;
+        margin-bottom: 25px !important;
+
+        @include element('title') {
+          display: flex;
+          margin-bottom: 5px;
+          
+          .title {
+            margin-left: 12px;
+          }
+        }
+
+        @include element('content') {
+          iframe {
+            border-radius: 8px;
+          }
+
+          a {
+            color: $text-color;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  @include element('list') {
+    @media (max-width: 991px) {
+      margin-top: 30px;
+    }
+
+    .box {
+      background-color: $white;
+      display: flex;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+
+      @media (max-width: 768px) {
+        display: block;
+      }
+
+      @include element('image') {
+        display: flex;
+
+        .thumbnail {
+          position: relative;
+          margin: auto;
+          
+          .distance {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background-color: $findfood-red;
+            color: $white;
+            font-size: 13px;
+            padding: 8px 10px;
+            border-radius: 8px;
+            @include fonts('Gilroy Bold');
+
+            @include element('icon') {
+              margin-right: 3px;
+            }
+          }
+
+          .image-restaurant {
+            width: 270px;
+            height: 270px;
+            object-fit: cover;
+            border-radius: 8px;
+
+            @media (max-width: 768px) {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      @include element('content') {
+        width: 100%;
+        align-self: center;
+        margin-left: 20px;
+        padding-right: 10px;
+
+        @media (max-width: 768px) {
+          margin-left: 0;
+          padding-right: 0;
+          padding-bottom: 0;
+          padding: 15px;
+          margin-top: 10px;
+        }
+
+        .block {
+          @include element('tag') {
+            font-size: 14px;
+            opacity: 0.5;
+            margin-bottom: 5px;
+          }
+          
+          @include element('title') {
+            display: flex;
+            justify-content: space-between;
+
+            @media (max-width: 768px) {
+              display: block;
+            }
+
+            a {
+              &:hover {
+                color: $findfood-red !important;
+              }
+            }
+            
+            h2 {
+              font-size: 24px;
+              margin-bottom: 0;
+              color: $text-color;
+              @include fonts('Gilroy Bold');
+
+              @media (max-width: 768px) {
+                font-size: 22px;
+                margin: 10px 0;
+              }
+
+              &:hover {
+                color: $findfood-red !important;
+              }
+            }
+
+            .time { 
+              align-self: center;
+              font-size: 14px;
+              color: #e88c13;
+              @include fonts('Gilroy Bold')
+            }
+          }
+
+          @include element('review') {
+            display: flex;
+            margin: 10px 0;
+
+            @media (max-width: 768px) {
+              display: block;
+
+              .dot {
+                display: none;
+              }
+
+              .review__star {
+                margin-bottom: 10px;
+              }
+            }
+            
+            .review {
+              @include element('star') {
+                display: flex;
+                font-size: 16px;
+                
+                .star {
+
+                  &__average {
+                    margin-right: 5px;
+                    @include fonts('Gilroy Bold')
+                  }
+                  
+                  &__icon {
+                    display: flex;
+                    align-self: center;
+                    margin-right: 10px;
+                    margin-bottom: 0;
+
+                    li {
+                      color: #d8d8d8;
+
+                      &.full {
+                        color: #fbc40f;
+                      }
+                    }
+                  }
+
+                  &__total {
+                    opacity: 0.5;
+                  }
+                }
+              }
+
+              @include element('circles') {
+                display: flex;
+
+                .circles {
+                  &__average {
+                    margin-right: 5px;
+                    @include fonts('Gilroy Bold')
+                  }
+
+                  &__icon {
+                    display: flex;
+                    align-self: center;
+                    margin-right: 10px;
+                    margin-bottom: 0;
+
+                    .circle {
+                      position: relative;
+                      display: inline-block;
+                      width: 15px;
+                      height: 15px;
+                      border-radius: 50%;
+                      list-style: none;
+                      border: 2px solid #00aa6c;
+                      overflow: hidden;
+                      margin-right: 2px;
+
+                      &.full {
+                        &:before {
+                          content: '';
+                          display: inline-block;
+                          background: #00aa6c;
+                          width: 100%;
+                          height: 100%;
+                          border-radius: 50%;
+                          vertical-align: top;
+                        }
+                      }
+
+                      &.half {
+                        &:before {
+                          content: '';
+                          display: inline-block;
+                          background: #00aa6c;
+                          width: 100%;
+                          height: 100%;
+                          margin-left: -50%;
+                          vertical-align: top;
+                        }
+                      }
+                    }
+                  }
+
+                  &__total {
+                    opacity: 0.5;
+                  }
+                }
+              }
+            }
+
+            .dot {
+              opacity: 0.5;
+              padding: 0 5px;
+            }
+          }
+
+          @include element('description') {
+            margin: 10px 0;
+            ul {
+              padding-left: 20px;
+
+              li {
+                line-height: 2;
+
+                @media (max-width: 768px) {
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+
+          @include element('info') {
+            display: flex;
+            justify-content: space-between;
+
+            @media (max-width: 768px) {
+              display: block;
+            }
+
+            .title {
+              margin-bottom: 10px;
+              font-size: 15px;
+              @include fonts('Gilroy Bold')
+            }
+
+            .delivery-location {
+              p {
+                @media (max-width: 768px) {
+                  font-size: 15px;
+                }
+              }
+            }
+
+            .order-by {
+              text-align: right;
+
+              @media (max-width: 768px) {
+                text-align: unset;
+
+                ul {
+                  float: unset !important;
+
+                  li {
+                    margin-right: 30px;
+                    margin-left: 0 !important;
+                  }
+                }
+              }
+
+              ul {
+                display: flex;
+                float: right;
+                margin-bottom: 0;
+
+                li {
+                  margin-left: 30px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

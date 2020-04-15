@@ -1,0 +1,40 @@
+.form-control {
+  padding-left: 0 !important;
+  border-radius: 0 !important;
+  border: 0 !important;
+
+  &:focus {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+}
+
+.select.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-position: right 50%;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSI3LjQxIiB2aWV3Qm94PSIwIDAgMTIgNy40MSI+CiAgPHBhdGggaWQ9IlBhdGhfNDc4NCIgZGF0YS1uYW1lPSJQYXRoIDQ3ODQiIGQ9Ik0xNi41OSw4LjU5LDEyLDEzLjE3LDcuNDEsOC41OSw2LDEwbDYsNiw2LTZaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNiAtOC41OSkiIGZpbGw9IiMxNTFmNmQiLz4KPC9zdmc+Cg==");
+  padding-left: 0;
+  border: 0;
+  font-size: 15px;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: $findfood-red !important;
+  border-color: $findfood-red !important;
+}
+
+.abc-checkbox label {
+  line-height: 1.1;
+  cursor: pointer;
+
+  &:after {
+    line-height: 1.5;
+  }
+}
+
+.abc-checkbox-danger input[type="checkbox"]:checked+label::before, .abc-checkbox-danger input[type="radio"]:checked+label::before {
+  background-color: $findfood-red !important;
+  border-color: $findfood-red !important;
+}
