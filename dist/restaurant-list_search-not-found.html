@@ -78,18 +78,38 @@
         <div class="filter">
           <div class="filter__type">
             <div class="title">Type</div>
-            <ul class="list-unstyled" id="filterType">
-              <li class="active"><a href="javascript:;" class="btn btn-link">Hawker</a></li>
-              <li><a href="javascript:;" class="btn btn-link">Restaurant</a></li>
-              <li><a href="javascript:;" class="btn btn-link">Drinks</a></li>
+            <!-- Change for radio button filter -->
+            <ul class="list-unstyled filter-box">
+              <li>
+                <input type="radio" id="filterType1" name="filterType" />
+                <label for="filterType1">Hawker</label>
+              </li>
+              <li>
+                <input type="radio" id="filterType2" name="filterType" />
+                <label for="filterType2">Restaurant</label>
+              </li>
+              <li>
+                <input type="radio" id="filterType3" name="filterType" />
+                <label for="filterType3">Drinks</label>
+              </li>
             </ul>
           </div>
           <div class="filter__distance">
             <div class="title">Distance</div>
-            <ul class="list-unstyled" id="filterDistance">
-              <li><a href="javascript:;" class="btn btn-link">< 2 km</a></li>
-              <li class="active"><a href="javascript:;" class="btn btn-link">2 km - 5 km</a></li>
-              <li><a href="javascript:;" class="btn btn-link">> 5 km</a></li>
+            <!-- Change for radio button filter -->
+            <ul class="list-unstyled filter-box">
+              <li>
+                <input type="radio" id="filterDistance1" name="filterDistance" />
+                <label for="filterDistance1">< 2 km</label>
+              </li>
+              <li>
+                <input type="radio" id="filterDistance2" name="filterDistance" />
+                <label for="filterDistance2">2 km - 5 km</label>
+              </li>
+              <li>
+                <input type="radio" id="filterDistance3" name="filterDistance" />
+                <label for="filterDistance3">> 5 km</label>
+              </li>
             </ul>
           </div>
         </div>
