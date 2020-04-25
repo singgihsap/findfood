@@ -43,17 +43,6 @@
               </div>
             </div>
           </form>
-          <div class="navbar-nav">
-            <div class="delivery">
-              <div class="delivery__image">
-                <img width="17" src="assets/images/icon/ic-location-white.svg" alt="Icon Location Delivery">
-              </div>
-              <div class="delivery__content">
-                <div class="number">589664</div>
-                <p>Delivery</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </nav>
@@ -65,15 +54,6 @@
     <!-- start:restaurant filter -->
     <div class="restaurant__filter">
       <div class="container">
-        <!-- start:breadcrumb mobile -->
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb breadcrumb--mobile">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item active">Search Result</li>
-          </ol>
-        </nav>
-        <!-- end:/breadcrumb mobile -->
-
         <!-- start:filter -->
         <div class="filter">
           <div class="filter__type">
@@ -121,14 +101,70 @@
     <!-- start:restaurant main -->
     <div class="restaurant-main">
       <div class="container">
-        <!-- start:breadcrumb desktop -->
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb breadcrumb--desktop">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item active">Search Result</li>
-          </ol>
-        </nav>
-        <!-- end:/breadcrumb desktop -->
+        <div class="filter-by">
+          <div class="filter-by__header">
+            <div class="results">Your search results in <span>12 Kallang Avenue</span></div>
+            <div class="action">
+              <button class="btn btn-search action-search-js" data-toggle="collapse" data-target="#ChangeSearch">Change Search</button>
+              <a class="btn btn-primary action-filter-js" data-toggle="collapse" href="#collapseFilter">
+                <img src="assets/images/icon/ic-filter.svg" alt="Icon filter">
+              </a>
+            </div>
+          </div>
+          <div class="filter-by__body">
+            <div class="block collapse" id="ChangeSearch">
+              <ul class="nav nav-pills" id="pills-tab">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="pill" href="#order">ORDER METHOD</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="pill" href="#restaurant">RESTAURANT</a>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="order">
+                  <form action="#" class="block__form">
+                    <div class="form-group">
+                      <label>Find</label>
+                      <select class="form-control select">
+                        <option selected disabled>Select one</option>
+                        <option>Delivery</option>
+                        <option>Pickup</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>To</label>
+                      <input type="text" class="form-control" placeholder="Postal Code">
+                    </div>
+                    <div class="form-group">
+                      <label>Available</label>
+                      <select class="form-control select">
+                        <option>Now</option>
+                        <option>Later</option>
+                      </select>
+                    </div>
+                    <!-- Change button input -->
+                    <div class="button">
+                      <input type="button" class="btn btn-primary" value="Search">
+                    </div>
+                  </form>
+                </div>
+                <div class="tab-pane fade" id="restaurant">
+                  <form action="#" class="block__form">
+                    <div class="form-group">
+                      <label>RESTAURANT</label>
+                      <input type="text" class="form-control" placeholder="Search by restaurant name or restaurant address">
+                    </div>
+                    <!-- Change button input -->
+                    <div class="button">
+                      <input type="button" class="btn btn-primary" value="Search">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- start:restaurant content -->
         <div class="restaurant-content">
@@ -138,6 +174,30 @@
               <div class="restaurant__sidebar">
                 <!-- start:filter desktop -->
                 <div class="filter-desktop">
+                  <!-- start:filter item -->
+                  <div class="box">
+                    <div class="box__title">Ordering Method</div>
+                    <ul class="list-unstyled">
+                      <li>
+                        <div class="form-check abc-radio abc-radio-danger">
+                          <input class="form-check-input" id="OrderMethod1" type="radio" name="OrderMethod">
+                          <label class="form-check-label" for="OrderMethod1">
+                            Delivery
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-check abc-radio abc-radio-danger">
+                          <input class="form-check-input" id="OrderMethod2" type="radio" name="OrderMethod">
+                          <label class="form-check-label" for="OrderMethod2">
+                            Pickup
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- end:/filter item -->
+
                   <!-- start:filter item -->
                   <div class="box">
                     <div class="box__title">Dietary Preference</div>
@@ -286,12 +346,32 @@
 
                 <!-- start:filter mobile -->
                 <div class="filter-mobile">
-                  <a class="btn btn-primary d-block collapsed" data-toggle="collapse" href="#collapseFilter">
-                    <img src="assets/images/icon/ic-filter.svg" alt="Icon filter">
-                    <span>Filter</span>
-                  </a>
                   <div class="collapse" id="collapseFilter">
                     <div class="card card-body">
+                      <!-- start:filter item -->
+                      <div class="box">
+                        <div class="box__title">Ordering Method</div>
+                        <ul class="list-unstyled">
+                          <li>
+                            <div class="form-check abc-radio abc-radio-danger">
+                              <input class="form-check-input" id="MobileOrderMethod1" type="radio" name="OrderMethod">
+                              <label class="form-check-label" for="MobileOrderMethod1">
+                                Delivery
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-check abc-radio abc-radio-danger">
+                              <input class="form-check-input" id="MobileOrderMethod2" type="radio" name="OrderMethod">
+                              <label class="form-check-label" for="MobileOrderMethod2">
+                                Pickup
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- end:/filter item -->
+
                       <!-- start:filter item -->
                       <div class="box">
                         <div class="box__title">Dietary Preference</div>
@@ -483,15 +563,21 @@
                       </div>
                       <div class="block__info">
                         <div class="delivery-location">
+                          <div class="title">Price</div>
+                          <p>$ 10</p>
+                        </div>
+                      </div>
+                      <div class="block__info">
+                        <div class="delivery-location">
                           <div class="title">Delivery Location</div>
                           <p>Serangoon, Hougang</p>
                         </div>
                         <div class="order-by">
                           <div class="title">Available order via</div>
                           <ul class="list-unstyled">
-                            <li><a href="#"><img src="assets/images/icon/ic-website.svg" alt="Icon Website"></a></li>
-                            <li><a href="#"><img src="assets/images/icon/ic-whatsapp.svg" alt="Icon Whatsapp"></a></li>
-                            <li><a href="#"><img src="assets/images/icon/ic-telephone.svg" alt="Icon Telephone"></a></li>
+                            <li><a href="https://www.findfood.sg/" target="_blank"><img src="assets/images/icon/ic-website.svg" alt="Icon Website"></a></li>
+                            <li><a href="https://api.whatsapp.com/send?phone=+6285742600102" target="_blank"><img src="assets/images/icon/ic-whatsapp.svg" alt="Icon Whatsapp"></a></li>
+                            <li><a href="tel:+6285742600102" target="_blank"><img src="assets/images/icon/ic-telephone.svg" alt="Icon Telephone"></a></li>
                           </ul>
                         </div>
                       </div>
@@ -539,13 +625,19 @@
                       </div>
                       <div class="block__info">
                         <div class="delivery-location">
+                          <div class="title">Price</div>
+                          <p>$ 10</p>
+                        </div>
+                      </div>
+                      <div class="block__info">
+                        <div class="delivery-location">
                           <div class="title">Delivery Location</div>
                           <p>Serangoon, Hougang</p>
                         </div>
                         <div class="order-by">
                           <div class="title">Available order via</div>
                           <ul class="list-unstyled">
-                            <li><a href="#"><img src="assets/images/icon/ic-whatsapp.svg" alt="Icon Whatsapp"></a></li>
+                            <li><a href="https://api.whatsapp.com/send?phone=+6285742600102" target="_blank"><img src="assets/images/icon/ic-whatsapp.svg" alt="Icon Whatsapp"></a></li>
                           </ul>
                         </div>
                       </div>
@@ -593,14 +685,20 @@
                       </div>
                       <div class="block__info">
                         <div class="delivery-location">
+                          <div class="title">Price</div>
+                          <p>$ 10</p>
+                        </div>
+                      </div>
+                      <div class="block__info">
+                        <div class="delivery-location">
                           <div class="title">Delivery Location</div>
                           <p>Serangoon, Hougang</p>
                         </div>
                         <div class="order-by">
                           <div class="title">Available order via</div>
                           <ul class="list-unstyled">
-                            <li><a href="#"><img src="assets/images/icon/ic-whatsapp.svg" alt="Icon Whatsapp"></a></li>
-                            <li><a href="#"><img src="assets/images/icon/ic-telephone.svg" alt="Icon Telephone"></a></li>
+                            <li><a href="https://api.whatsapp.com/send?phone=+6285742600102" target="_blank"><img src="assets/images/icon/ic-whatsapp.svg" alt="Icon Whatsapp"></a></li>
+                            <li><a href="tel:+6285742600102" target="_blank"><img src="assets/images/icon/ic-telephone.svg" alt="Icon Telephone"></a></li>
                           </ul>
                         </div>
                       </div>
@@ -649,15 +747,21 @@
                       </div>
                       <div class="block__info">
                         <div class="delivery-location">
+                          <div class="title">Price</div>
+                          <p>$ 10</p>
+                        </div>
+                      </div>
+                      <div class="block__info">
+                        <div class="delivery-location">
                           <div class="title">Delivery Location</div>
                           <p>Serangoon, Hougang</p>
                         </div>
                         <div class="order-by">
                           <div class="title">Available order via</div>
                           <ul class="list-unstyled">
-                            <li><a href="#"><img src="assets/images/icon/ic-website.svg" alt="Icon Website"></a></li>
-                            <li><a href="#"><img src="assets/images/icon/ic-whatsapp.svg" alt="Icon Whatsapp"></a></li>
-                            <li><a href="#"><img src="assets/images/icon/ic-telephone.svg" alt="Icon Telephone"></a></li>
+                            <li><a href="https://www.findfood.sg/" target="_blank"><img src="assets/images/icon/ic-website.svg" alt="Icon Website"></a></li>
+                            <li><a href="https://api.whatsapp.com/send?phone=+6285742600102" target="_blank"><img src="assets/images/icon/ic-whatsapp.svg" alt="Icon Whatsapp"></a></li>
+                            <li><a href="tel:+6285742600102" target="_blank"><img src="assets/images/icon/ic-telephone.svg" alt="Icon Telephone"></a></li>
                           </ul>
                         </div>
                       </div>
@@ -705,13 +809,19 @@
                       </div>
                       <div class="block__info">
                         <div class="delivery-location">
+                          <div class="title">Price</div>
+                          <p>$ 10</p>
+                        </div>
+                      </div>
+                      <div class="block__info">
+                        <div class="delivery-location">
                           <div class="title">Delivery Location</div>
                           <p>Serangoon, Hougang</p>
                         </div>
                         <div class="order-by">
                           <div class="title">Available order via</div>
                           <ul class="list-unstyled">
-                            <li><a href="#"><img src="assets/images/icon/ic-whatsapp.svg" alt="Icon Whatsapp"></a></li>
+                            <li><a href="https://api.whatsapp.com/send?phone=+6285742600102" target="_blank"><img src="assets/images/icon/ic-whatsapp.svg" alt="Icon Whatsapp"></a></li>
                           </ul>
                         </div>
                       </div>
@@ -759,14 +869,20 @@
                       </div>
                       <div class="block__info">
                         <div class="delivery-location">
+                          <div class="title">Price</div>
+                          <p>$ 10</p>
+                        </div>
+                      </div>
+                      <div class="block__info">
+                        <div class="delivery-location">
                           <div class="title">Delivery Location</div>
                           <p>Serangoon, Hougang</p>
                         </div>
                         <div class="order-by">
                           <div class="title">Available order via</div>
                           <ul class="list-unstyled">
-                            <li><a href="#"><img src="assets/images/icon/ic-whatsapp.svg" alt="Icon Whatsapp"></a></li>
-                            <li><a href="#"><img src="assets/images/icon/ic-telephone.svg" alt="Icon Telephone"></a></li>
+                            <li><a href="https://api.whatsapp.com/send?phone=+6285742600102" target="_blank"><img src="assets/images/icon/ic-whatsapp.svg" alt="Icon Whatsapp"></a></li>
+                            <li><a href="tel:+6285742600102" target="_blank"><img src="assets/images/icon/ic-telephone.svg" alt="Icon Telephone"></a></li>
                           </ul>
                         </div>
                       </div>
@@ -816,7 +932,7 @@
             <div class="logo">
               <img width="160" src="assets/images/logo-white.svg" alt="Logo Find Food SG">
             </div>
-            <p>Discover & support independent restaurants <br/> & hawkers near you !</p>
+            <p>Discover & support independent restaurants <br /> & bars !</p>
           </div>
           <!-- end:/footer box -->
         </div>
@@ -826,8 +942,8 @@
             <div class="title">Menu</div>
             <ul class="list-unstyled">
               <li><a href="index.html">Home</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="about-us.html">About us</a></li>
+              <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
           <!-- end:/footer box -->
