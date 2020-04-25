@@ -1,11 +1,253 @@
 .restaurant {
-  margin-top: 82px;
+  margin-top: 80px;
 
   &-main {
     padding: 20px 0;
 
+    @media (max-width: 991px) {
+      overflow: hidden;
+    }
+
     .breadcrumb {
       margin-bottom: 15px;
+    }
+
+    .filter-by {
+      margin-bottom: 30px;
+
+      @media (max-width: 991px) {
+        margin-bottom: 0;
+      }
+
+      @include element('header') {
+        display: flex;
+        padding-top: 15px;
+        padding-bottom: 20px;
+
+        @media (max-width: 991px) {
+          display: block;
+          padding-bottom: 0;
+        }
+
+        .results {
+          align-self: center;
+          margin-right: auto;
+
+          span {
+            @include fonts('Gilroy Bold')
+          }
+        }
+
+        .action {
+          @media (max-width: 991px) {
+            display: flex;
+            margin: 20px 0;
+          }
+
+          .btn-search {
+            padding: 10px 20px;
+            background-color: $white;
+            color: $findfood-red;
+            border: 1px solid $findfood-red;
+            border-radius: 8px !important;
+            @include fonts('Gilroy Bold');
+
+            @media (max-width: 991px) {
+              display: block;
+              width: 100%;
+              margin-right: 15px;
+            }
+          }
+
+          a {
+            &.btn-primary {
+              position: relative;
+              background-color: $white !important;
+              border-color: $findfood-border !important;
+              color: $text-color;
+              text-align: left;
+              padding: 10px 15px;
+              letter-spacing: 1px;
+              display: none;
+              
+              @media (max-width: 991px) {
+                display: unset;
+              }
+
+              &.collapsed {
+                &:after {
+                  transform: rotate(0deg);
+                  -webkit-transform: rotate(0deg);
+                  @include transition(.3s)
+                }
+              }
+
+              span {
+                vertical-align: middle;
+              }
+            }
+          }
+        }
+      }
+      @include element('body') {
+        .block {
+          @include element('form') {
+            display: flex;
+            background-color: $white;
+            border-radius: 8px;
+            border-top-left-radius: 0 !important;
+            padding: 10px 15px;
+            padding-left: 25px;
+
+            @media (max-width: 768px) {
+              display: block;
+              background-color: transparent;
+              box-shadow: none;
+              padding: 0;
+            }
+
+            .form-group {
+              width: 28%;
+              margin-bottom: 0;
+              position: relative;
+              padding-right: 40px;
+
+              @media (max-width: 768px) {
+                width: 100%;
+                padding-right: 0;
+                background-color: $white;
+                border-radius: 8px;
+                padding: 10px 20px;
+                margin-bottom: 10px;
+              }
+
+              &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                transform: translate(-50%, -50%);
+                width: 1px;
+                height: 40px;
+                display: block;
+                background-color: #e6d3c2;
+
+                @media (max-width: 768px) {
+                  content: unset;
+                }
+              }
+
+              &:nth-child(3) {
+                &:after {
+                  content: unset;
+                }
+              }
+
+              label {
+                margin-bottom: 0;
+                font-size: 12px;
+                text-transform: uppercase;
+                @include fonts('Gilroy Bold')
+              }
+            }
+
+            .button {
+              height: 48px;
+              position: relative;
+              align-self: center;
+              margin-left: auto;
+
+              .btn-primary {
+                display: block;
+                height: 48px;
+                align-self: center;
+                width: 110px;
+                text-align: right;
+                padding-right: 15px;
+
+                @media (max-width: 768px) {
+                  display: block;
+                  width: 100%;
+                  margin-top: 30px;
+                  text-align: center;
+                  box-shadow: 0 16px 25px 0 rgba(177, 138, 102, 0.38);
+                }
+              }
+
+              &:before {
+                content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxkZWZzPgogICAgICAgIDxmaWx0ZXIgaWQ9InByZWZpeF9fYSIgd2lkdGg9IjE0OS44JSIgaGVpZ2h0PSI0NzQuNCUiIHg9Ii0yNC45JSIgeT0iLTE4Ny4yJSIgZmlsdGVyVW5pdHM9Im9iamVjdEJvdW5kaW5nQm94Ij4KICAgICAgICAgICAgPGZlT2Zmc2V0IGR5PSIzOSIgaW49IlNvdXJjZUFscGhhIiByZXN1bHQ9InNoYWRvd09mZnNldE91dGVyMSIvPgogICAgICAgICAgICA8ZmVHYXVzc2lhbkJsdXIgaW49InNoYWRvd09mZnNldE91dGVyMSIgcmVzdWx0PSJzaGFkb3dCbHVyT3V0ZXIxIiBzdGREZXZpYXRpb249IjIyLjUiLz4KICAgICAgICAgICAgPGZlQ29sb3JNYXRyaXggaW49InNoYWRvd0JsdXJPdXRlcjEiIHJlc3VsdD0ic2hhZG93TWF0cml4T3V0ZXIxIiB2YWx1ZXM9IjAgMCAwIDAgMC43Mzk3ODE0NzYgMCAwIDAgMCAwLjY0MzYzNjI5NyAwIDAgMCAwIDAuNTU3MTA1NjM1IDAgMCAwIDAuMjM2MDEzOTg2IDAiLz4KICAgICAgICAgICAgPGZlTWVyZ2U+CiAgICAgICAgICAgICAgICA8ZmVNZXJnZU5vZGUgaW49InNoYWRvd01hdHJpeE91dGVyMSIvPgogICAgICAgICAgICAgICAgPGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+CiAgICAgICAgICAgIDwvZmVNZXJnZT4KICAgICAgICA8L2ZpbHRlcj4KICAgIDwvZGVmcz4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZmlsdGVyPSJ1cmwoI3ByZWZpeF9fYSkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MzQgLTMxKSI+CiAgICAgICAgPGc+CiAgICAgICAgICAgIDxnIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MzQgMzEpIHRyYW5zbGF0ZSg0IDQpIj4KICAgICAgICAgICAgICAgIDxjaXJjbGUgY3g9IjYuODU3IiBjeT0iNi44NTciIHI9IjUuODU3Ii8+CiAgICAgICAgICAgICAgICA8cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIGQ9Ik0xMS43MTEgMTEuNzExTDE2IDE2Ii8+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=');
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                top: 50%;
+                left: 23px;
+                transform: translate(-50%, -50%);
+
+                @media (max-width: 768px) {
+                  left: 40%;
+                }
+
+                @media (max-width: 500px) {
+                  left: 35%;
+                }
+
+                @media (max-width: 330px) {
+                  left: 30%;
+                }
+              }
+            }
+          }
+
+          #restaurant {
+            .form-group {
+              width: 100%;
+
+              &:after {
+                content: unset;
+              }
+            }
+          }
+
+          .nav-pills {
+            @media (max-width: 768px) {
+              margin-bottom: 10px;
+            }
+            
+            .nav-item {
+              @media (max-width: 768px) {
+                flex: 1 1 auto;
+                text-align: center;
+              }
+
+              &:first-child {
+                .nav-link {
+                  border-top-left-radius: 8px;
+                }
+              }
+
+              &:last-child {
+                .nav-link {
+                  border-top-right-radius: 8px;
+                }
+              }
+              
+              .nav-link {
+                padding: 15px 20px;
+                background-color: #f5f5f5;
+                font-size: 14px;
+                color: #333333;
+                border-radius: 0;
+                @include fonts('Gilroy Bold');
+
+                &.active {
+                  background-color: $white;
+                  color: $findfood-red;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 
@@ -14,15 +256,7 @@
       margin-bottom: 20px;
 
       .header {
-        &-desktop {
-          @media (max-width: 991px) {
-            display: none;
-          }
-        }
-
         &-mobile {
-          display: none;
-
           @media (max-width: 991px) {
             display: block;
           }
@@ -32,7 +266,11 @@
 
             &__box {
               .image-slider {
-                height: 300px;
+                height: 400px;
+
+                @media (max-width: 441px) {
+                  height: 300px;
+                }
               }
             }
           }
@@ -160,22 +398,38 @@
               align-self: center;
 
               .title-header {
-                display: flex;
+                .block-head {
+                  display: flex;
+                  margin-top: 15px;
+                  
+                  @include element('profile') {
+                    margin-right: 15px;
+
+                    img {
+                      width: 80px;
+                      height: 80px;
+                      object-fit: cover;
+                      border-radius: 100%;
+                    }
+                  }
+                  @include element('title') {}
+                }
 
                 .distance {
                   display: inline-flex;
-                  background-color: $findfood-red;
-                  color: $white;
-                  font-size: 13px;
-                  padding: 10px;
+                  color: $findfood-red;
+                  font-size: 14px;
+                  padding: 10px 0;
                   border-radius: 8px;
                   height: 40px;
-                  margin-right: 15px;
                   @include fonts('Gilroy Bold');
+                  
+                  img {
+                    margin-right: 8px;
+                  }
 
                   @media (max-width: 991px) {
                     font-size: 12px;
-                    padding: 8px;
                     height: unset;
                   }
 
@@ -186,7 +440,7 @@
                 }
 
                 h2 {
-                  font-size: 34px;
+                  font-size: 30px;
                   margin-bottom: 0;
                   align-self: center;
                   @include fonts('Gilroy Bold');
@@ -225,7 +479,7 @@
           }
 
           .block {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
 
             &:last-child {
               margin-bottom: 0;
@@ -507,11 +761,6 @@
     background-color: $white;
     box-shadow: 0 2px 10px 0 rgba(202, 171, 143, 0.6);
 
-    @media (max-width: 991px) {
-      background-color: transparent;
-      box-shadow: none;
-    }
-
     .filter {
       display: flex;
       padding: 15px 0;
@@ -738,6 +987,10 @@
       .box {
         padding: 0 !important;
         margin-bottom: 25px !important;
+
+        &:last-child {
+          margin-bottom: 0 !important;
+        }
 
         @include element('title') {
           display: flex;

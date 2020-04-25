@@ -25,6 +25,7 @@
   border-color: $findfood-red !important;
 }
 
+.abc-radio label,
 .abc-checkbox label {
   line-height: 1.1;
   cursor: pointer;
@@ -35,6 +36,11 @@
 }
 
 .abc-checkbox-danger input[type="checkbox"]:checked+label::before, .abc-checkbox-danger input[type="radio"]:checked+label::before {
+  background-color: $findfood-red !important;
+  border-color: $findfood-red !important;
+}
+
+.abc-radio-danger input[type="radio"]:checked+label::after, .abc-radio-danger input[type="radio"]:checked+label::after {
   background-color: $findfood-red !important;
   border-color: $findfood-red !important;
 }

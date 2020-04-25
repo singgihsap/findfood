@@ -21,20 +21,31 @@ $(document).ready(function () {
     });
     
     /*========================================*/
+    /* START: Handling for filter and change search mobile */
+    /*========================================*/
+    $('.action-search-js').click(function () {
+        $("#collapseFilter").removeClass("show");
+    });
+
+    $('.action-filter-js').click(function () {
+        $("#ChangeSearch").removeClass("show");
+    });
+    
+    /*========================================*/
     /* START: Slick Slider */
     /*========================================*/
     // Slider Half
     $('.slider-half').slick({
-        infinite: false,
+        infinite: true,
         speed: 300,
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
         responsive: [
             {
                 breakpoint: 1150,
                 settings: {
                     infinite: false,
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                 }
             },

@@ -1,6 +1,4 @@
 .slider {
-  overflow: hidden;
-
   &.slider-half {
     @media (max-width: 768px) {
       padding-right: 40px;
@@ -28,7 +26,9 @@
 
     .slick-prev,
     .slick-next {
-      display: none !important;
+      @media (max-width: 768px) {
+        display: none !important;
+      }
     }
   }
 
@@ -64,36 +64,29 @@
   }
 
   .slick-prev {
-    background: url('../images/icon/ic-arrow-left.svg') no-repeat center center !important;
-    left: unset;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NCIgaGVpZ2h0PSI1NCIgdmlld0JveD0iMCAwIDU0IDU0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGNpcmNsZSBjeD0iMjciIGN5PSIyNyIgcj0iMjciIGZpbGw9IiNGRkYiLz4KICAgICAgICA8Zz4KICAgICAgICAgICAgPHBhdGggc3Ryb2tlPSIjMzMzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTYgOUwxMiAxNSAxOCA5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNCAxNSkgbWF0cml4KDAgLTEgLTEgMCAyNCAyNCkiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=') no-repeat center center !important;
+    left: -30px;
 
     &:before {
       content: "";
-    }
-
-    &:hover {
-      background: url('../images/icon/ic-arrow-left_hover.svg') no-repeat center center !important;
     }
   }
 
   .slick-next {
-    background: url('../images/icon/ic-arrow-right.svg') no-repeat center center !important;
-    right: 0;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NCIgaGVpZ2h0PSI1NCIgdmlld0JveD0iMCAwIDU0IDU0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGNpcmNsZSBjeD0iMjciIGN5PSIyNyIgcj0iMjciIGZpbGw9IiNGRkYiLz4KICAgICAgICA8Zz4KICAgICAgICAgICAgPHBhdGggc3Ryb2tlPSIjMzMzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTYgOUwxMiAxNSAxOCA5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNSAxNSkgcm90YXRlKC05MCAxMiAxMikiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=') no-repeat center center !important;
+    right: -22px;
 
     &:before {
       content: "";
-    }
-
-    &:hover {
-      background: url('../images/icon/ic-arrow-right_hover.svg') no-repeat center center !important;
     }
   }
 
   .slick-prev,
   .slick-next {
     z-index: 1;
-    width: 46px;
-    height: 51px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
 
     &.slick-disabled {
       opacity: .5;

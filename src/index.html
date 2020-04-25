@@ -47,31 +47,55 @@
           </div>
           <h1>Discover & support independent restaurants & hawkers near you!</h1>
           <div class="block">
-            <form action="#" class="block__form">
-              <div class="form-group">
-                <label>Find</label>
-                <select class="form-control select">
-                  <option selected disabled>Select one</option>
-                  <option>Delivery</option>
-                  <option>Pickup</option>
-                </select>
+            <ul class="nav nav-pills" id="pills-tab">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="pill" href="#order">ORDER</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#restaurant">RESTAURANT</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="order">
+                <form action="#" class="block__form">
+                  <div class="form-group">
+                    <label>Find</label>
+                    <select class="form-control select">
+                      <option selected disabled>Select one</option>
+                      <option>Delivery</option>
+                      <option>Pickup</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>To</label>
+                    <input type="text" class="form-control" placeholder="Postal Code">
+                  </div>
+                  <div class="form-group">
+                    <label>Available</label>
+                    <select class="form-control select">
+                      <option>Now</option>
+                      <option>Later</option>
+                    </select>
+                  </div>
+                  <!-- Change button input -->
+                  <div class="button">
+                    <input type="button" class="btn btn-primary" value="Search">
+                  </div>
+                </form>
               </div>
-              <div class="form-group">
-                <label>To</label>
-                <input type="text" class="form-control" placeholder="Postal Code">
+              <div class="tab-pane fade" id="restaurant">
+                <form action="#" class="block__form">
+                  <div class="form-group">
+                    <label>RESTAURANT</label>
+                    <input type="text" class="form-control" placeholder="Search by restaurant name or restaurant address">
+                  </div>
+                  <!-- Change button input -->
+                  <div class="button">
+                    <input type="button" class="btn btn-primary" value="Search">
+                  </div>
+                </form>
               </div>
-              <div class="form-group">
-                <label>Available</label>
-                <select class="form-control select">
-                  <option>Now</option>
-                  <option>Later</option>
-                </select>
-              </div>
-              <!-- Change button input -->
-              <div class="button">
-                <input type="button" class="btn btn-primary" value="Search">
-              </div>
-            </form>
+            </div>
           </div>
         </div>
         <!-- end:/content left -->
@@ -101,7 +125,7 @@
             <div class="logo">
               <img width="160" src="assets/images/logo-white.svg" alt="Logo Find Food SG">
             </div>
-            <p>Discover & support independent restaurants <br/> & hawkers near you !</p>
+            <p>Discover & support independent restaurants <br /> & bars !</p>
           </div>
           <!-- end:/footer box -->
         </div>
@@ -111,8 +135,8 @@
             <div class="title">Menu</div>
             <ul class="list-unstyled">
               <li><a href="index.html">Home</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="about-us.html">About us</a></li>
+              <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
           <!-- end:/footer box -->
